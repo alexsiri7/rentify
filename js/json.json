@@ -1,0 +1,59 @@
+{
+   "destination_addresses" : [ "San Francisco, Californie, États-Unis", "Vancouver, BC, Canada" ],
+   "origin_addresses" : [ "Vancouver, BC, Canada", "Seattle, État de Washington, États-Unis" ],
+   "rows" : [
+      {
+         "elements" : [
+            {
+               "distance" : {
+                  "text" : "1 715 km",
+                  "value" : 1715150
+               },
+               "duration" : {
+                  "text" : "3 jours 20 heures",
+                  "value" : 331422
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : {
+                  "text" : "1 minute",
+                  "value" : 0
+               },
+               "status" : "OK"
+            }
+         ]
+      },
+      {
+         "elements" : [
+            {
+               "distance" : {
+                  "text" : "1 462 km",
+                  "value" : 1461663
+               },
+               "duration" : {
+                  "text" : "3 jours 5 heures",
+                  "value" : 278612
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : {
+                  "text" : "268 km",
+                  "value" : 268226
+               },
+               "duration" : {
+                  "text" : "15 heures 26 minutes",
+                  "value" : 55532
+               },
+               "status" : "OK"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

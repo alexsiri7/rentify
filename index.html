@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Ultimate Guide to Renting - Rentify</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+	<!-- 3D Book files -->
+	
+	<link rel="stylesheet" type="text/css" href="stylesheets/component.css" />
+	<script src="js/modernizr.custom.js"></script>
+	
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+</head>
+<body>
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<div class="container" style="margin-top:50px;">
+
+		<div class="eight columns cbook">
+			<ul id="bk-list" class="bk-list clearfix">
+					<li>
+						<div class="bk-book book-1 bk-bookdefault">
+							<div class="bk-front">
+								<div class="bk-cover">
+									<h2>
+									<span>Rentify</span>
+									<span>Ultimate Guide to Renting</span>
+									</h2>
+								</div>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+								<h2>
+									<span>Rentify</span>
+									<span>Ultimate Guide to Renting</span>
+								</h2>
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+						
+					</li>
+				</ul>
+			
+		</div>
+
+		<div class="eight columns mcontent">
+			<div class="three-thirds" style="margin:10px">
+				<a href="https://www.rentify.com"><img src="images/logo.png"/></a>
+
+				<h1 class="remove-bottom" style="">Ultimate Guide to Renting</h1>
+				<p class="bodytext">Are you a property owner that want to let your property without spending a lot in fees and paperwork? Do you want to find a new trustworthy tenant? We at Rentify understand your problems, and in an extra effort to help you, we put together a free ebook called the Ultimate Guide to Renting, where landlords can find all the best tips to make your life as a landlord even easier.</p>
+				<small class="margin-bottom:20px"><p>We won't spam, and we'll keep your data safe and private. </p></small>
+
+				<form id="form" parsley-validate novalidate>
+					<div class="email-container"><input type="email" name="email" placeholder="Your e-mail*" parsley-trigger="change focusout" required /></div>
+					<div class="postcode-container">
+
+						<input type="text" data-regexp="^[a-zA-Z]{1,2}[\d]{1,2}[a-zA-Z]?\s?\d[a-zA-Z]{2}$" parsley-trigger="change focusout" id="postcode" placeholder="Postcode*"  data-error-message="Invalid Postcode" style="width:80px" required>
+					</div>
+					<input  id="button" class="button" value="Download Book"/>
+				</form>	
+			</div>
+		</div>
+		
+
+		
+
+	</div><!-- container -->
+
+		<div class="dlink" style="display:none;">
+			<h1>Thank you!</h1>
+			<p>
+				Download your book here:
+				<a href="http://bit.ly/1iLH55i" target="_blank">http://bit.ly/1iLH55i</a>
+			</p>
+		</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/parsley.js/1.1.16/parsley-standalone.min.js"></script>
+		<script src="js/books1.js"></script>
+		<script>
+			
+				$(function() {
+
+					Books.init();
+
+				});
+
+				$( "#form" ).submit(function( event ) {
+						console.log("asdada");
+					});
+
+				$( "#button" ).click(function() {
+	  				$('#form').parsley('validate');
+
+	  				var validated = $( '#form' ).parsley( 'isValid' );
+	  				console.log(validated);
+
+	  				if (validated == true){
+
+		  				var postcode = $("#postcode").val();
+		  				//console.log(postcode);
+		  				//window.alert("Download Book here: http://bit.ly/1iLH55i");
+
+		  				$(".dlink").slideDown();
+	  				
+		  				/* I was going to get the distance between the two locations with this json call from Google Maps Distance Matrix. Since I never used this I would need to take a deeper look into it, I was having a problem trying to get parse the json just with getJSON.
+		  				http://maps.googleapis.com/maps/api/distancematrix/json?origins=E16JE+london&destinations="+ postcode + "+london&sensor=false&units=imperial
+		  				*/
+	  				}
+
+				});
+
+		</script>
+
+
+<!-- End Document
+================================================== -->
+</body>
+</html>
